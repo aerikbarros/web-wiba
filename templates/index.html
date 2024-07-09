@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/styles/style.css" rel="stylesheet">
+    <link href="/styles/fonts.css" rel="stylesheet">
+    <title>Wiba Calculator Tool</title>
+</head>
+<body>
+    <h1>Wiba Calculator Tool</h1>
+    <div class="custom-select">
+    <form action="/calculate" method="post">
+        <label for="racer_number">Select a racer time to calculate the bonus:</label><br>
+        <select id="racer_number" name="racer_number" multiple size="12" autofocus>
+            {% for racer_name in racer_names %}
+            <option value="{{ loop.index }}">{{ racer_name }}</option>
+            {% endfor %}
+        </select><br><br>
+        <input type="submit" value="Calculate">
+    </form>
+    </div>
+</body>
+</html>
+

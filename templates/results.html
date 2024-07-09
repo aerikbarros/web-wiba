@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Results</title>
+</head>
+<body>
+    <h1>Results</h1>
+    <h2>You Chose</h2>
+    <p>Racer: {{ racer }}</p>
+    <p>Car: {{ car }}</p>
+    <p>Time: {{ time }}</p>
+    
+    <h2>Goal Times</h2>
+    <ul>
+        {% for result in results %}
+        <li>{{ result }}</li>
+        {% endfor %}
+    </ul>
+    
+    <p><a href="/wiba">Go back</a></p>
+    <p><a href="/">Home Page</a></p>
+</body>
+</html>
